@@ -46,6 +46,19 @@
 # rm wc-input.txt
 
 # MD5
+
+echo "\n----------------------------------------------------------------------------------------------------------------------------------------------\n"
+
+echo "RUNNING MD5 WORKLOAD"
+
+read -p "Enter data size in MB: " size
+
+python Gens/genMD5.py $size
+
+spark-submit Workloads/MD5.py md5-input.txt
+
+rm md5-input.txt
+
 # Connected Components
 # RandSample
 # FFT
