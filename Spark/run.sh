@@ -4,10 +4,19 @@
 # Python 2.7 (initial release) 
 
 # Sort
+
+read -p "Enter data size in MB: " size
+
+python Gens/genSort.py $size
+
+spark-submit Workloads/Sort.py sort-input.txt
+
+rm sort-input.txt
+
 # Grep
 # Wordcount
 
-python3 Wordcount.py ../Data/WC.txt
+# python3 Wordcount.py ../Data/WC.txt
 
 # MD5
 # Connected Components

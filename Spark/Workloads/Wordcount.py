@@ -20,8 +20,8 @@ if __name__ == "__main__":
     counts = lines.flatMap(lambda x: x.split(' ')) \
                   .map(lambda x: (x, 1)) \
                   .reduceByKey(add)
-    output = counts.take(10)
-    for (word, count) in output:
-        print("%s: %i" % (word, count))
+    # output = counts.take(10)
+    # for (word, count) in output:
+    #     print("%s: %i" % (word, count))
 
     spark.stop()
