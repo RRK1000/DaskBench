@@ -68,6 +68,19 @@
 # spark-submit --packages graphframes:graphframes:0.3.0-spark2.0-s_2.11 Workloads/ConnectedComponents.py 
 
 # RandSample
+
+echo "\n----------------------------------------------------------------------------------------------------------------------------------------------\n"
+
+echo "RUNNING RANDSAMPLE WORKLOAD"
+
+read -p "Enter data size in MB: " size
+
+python Gens/genRandSample.py $size
+
+spark-submit Workloads/RandSample.py randsample-input.txt
+
+rm randsample-input.txt
+
 # FFT
 # Matrix Multiplication
 # Read
