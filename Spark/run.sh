@@ -100,6 +100,19 @@
 # rm matrix-input.txt matrix-output.txt
 
 # Read
+
+echo "\n----------------------------------------------------------------------------------------------------------------------------------------------\n"
+
+echo "RUNNING READ WORKLOAD"
+
+read -p "Enter data size in MB: " size
+
+python Gens/genRead.py $size
+
+spark-submit Workloads/Read.py read-input.txt
+
+rm read-input.txt
+
 # Write
 # Scan
 # OrderBy
