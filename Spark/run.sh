@@ -69,20 +69,36 @@
 
 # RandSample
 
-echo "\n----------------------------------------------------------------------------------------------------------------------------------------------\n"
+# echo "\n----------------------------------------------------------------------------------------------------------------------------------------------\n"
 
-echo "RUNNING RANDSAMPLE WORKLOAD"
+# echo "RUNNING RANDSAMPLE WORKLOAD"
 
-read -p "Enter data size in MB: " size
+# read -p "Enter data size in MB: " size
 
-python Gens/genRandSample.py $size
+# python Gens/genRandSample.py $size
 
-spark-submit Workloads/RandSample.py randsample-input.txt
+# spark-submit Workloads/RandSample.py randsample-input.txt
 
-rm randsample-input.txt
+# rm randsample-input.txt
 
 # FFT
+
+# Cannot implement in Spark due to non-existence of complex classes
+
 # Matrix Multiplication
+
+# echo "\n----------------------------------------------------------------------------------------------------------------------------------------------\n"
+
+# echo "RUNNING MATRIX MULTIPLICATION WORKLOAD"
+
+# read -p "Enter Rows and Columns (Square): " size
+
+# python Gens/genMatMult.py $size
+
+# spark-submit Workloads/MatrixMultiplication.py matrix-input.txt matrix-output.txt
+
+# rm matrix-input.txt matrix-output.txt
+
 # Read
 # Write
 # Scan
