@@ -47,19 +47,26 @@
 
 # MD5
 
-echo "\n----------------------------------------------------------------------------------------------------------------------------------------------\n"
+# echo "\n----------------------------------------------------------------------------------------------------------------------------------------------\n"
 
-echo "RUNNING MD5 WORKLOAD"
+# echo "RUNNING MD5 WORKLOAD"
 
-read -p "Enter data size in MB: " size
+# read -p "Enter data size in MB: " size
 
-python Gens/genMD5.py $size
+# python Gens/genMD5.py $size
 
-spark-submit Workloads/MD5.py md5-input.txt
+# spark-submit Workloads/MD5.py md5-input.txt
 
-rm md5-input.txt
+# rm md5-input.txt
 
 # Connected Components
+
+# echo "\n----------------------------------------------------------------------------------------------------------------------------------------------\n"
+
+# echo "RUNNING CONNECTED COMPONENTS WORKLOAD"
+
+# spark-submit --packages graphframes:graphframes:0.3.0-spark2.0-s_2.11 Workloads/ConnectedComponents.py 
+
 # RandSample
 # FFT
 # Matrix Multiplication
