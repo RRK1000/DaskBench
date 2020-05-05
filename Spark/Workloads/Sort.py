@@ -19,8 +19,8 @@ if __name__ == "__main__":
     sortedCount = lines.flatMap(lambda x: x.split(' ')) \
         .map(lambda x: (x, 1)) \
         .sortByKey()
-    output = sortedCount.collect()
-    for (num, unitcount) in output:
-        print(num)
+    # output = sortedCount.collect()
+    # for (num, unitcount) in output:
+    #     print(num)
 
     spark.stop()

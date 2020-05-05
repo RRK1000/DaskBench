@@ -5,6 +5,10 @@
 
 # Sort
 
+echo "\n----------------------------------------------------------------------------------------------------------------------------------------------\n"
+
+echo "RUNNING SORT WORKLOAD"
+
 read -p "Enter data size in MB: " size
 
 python Gens/genSort.py $size
@@ -16,7 +20,17 @@ rm sort-input.txt
 # Grep
 # Wordcount
 
-# python3 Wordcount.py ../Data/WC.txt
+echo "\n----------------------------------------------------------------------------------------------------------------------------------------------\n"
+
+echo "RUNNING WORDCOUNT WORKLOAD"
+
+read -p "Enter data size in MB: " size
+
+python Gens/genWC.py $size
+
+spark-submit Workloads/Wordcount.py wc-input.txt
+
+rm wc-input.txt
 
 # MD5
 # Connected Components
