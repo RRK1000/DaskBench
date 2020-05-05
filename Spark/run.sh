@@ -7,7 +7,7 @@
 # Grep
 # Wordcount
 
-python3 Wordcount.py ../Data/Lorem.txt
+python3 Wordcount.py ../Data/WC.txt
 
 # MD5
 # Connected Components
