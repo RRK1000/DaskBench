@@ -101,19 +101,32 @@
 
 # Read
 
+# echo "\n----------------------------------------------------------------------------------------------------------------------------------------------\n"
+
+# echo "RUNNING READ WORKLOAD"
+
+# read -p "Enter data size in MB: " size
+
+# python Gens/genRead.py $size
+
+# spark-submit Workloads/Read.py read-input.txt
+
+# rm read-input.txt
+
+# Write
+
 echo "\n----------------------------------------------------------------------------------------------------------------------------------------------\n"
 
-echo "RUNNING READ WORKLOAD"
+echo "RUNNING WRITE WORKLOAD"
 
 read -p "Enter data size in MB: " size
 
-python Gens/genRead.py $size
+python Gens/genWrite.py $size
 
-spark-submit Workloads/Read.py read-input.txt
+spark-submit Workloads/Write.py write-input.txt
 
-rm read-input.txt
+rm write-input.txt write-output.txt
 
-# Write
 # Scan
 # OrderBy
 # Aggregation
