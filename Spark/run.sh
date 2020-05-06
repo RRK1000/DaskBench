@@ -190,5 +190,21 @@
 # rm csv-input.csv
 
 # Filter
+
+
+echo "\n----------------------------------------------------------------------------------------------------------------------------------------------\n"
+
+echo "RUNNING FILTER WORKLOAD"
+
+read -p "Enter rows: " rows
+
+read -p "Enter cols: " cols
+
+python Gens/genCSV.py $rows $cols
+
+spark-submit Workloads/Filter.py csv-input.csv
+
+rm csv-input.csv
+
 # Select
 # Union
