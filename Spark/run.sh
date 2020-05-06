@@ -115,19 +115,32 @@
 
 # Write
 
-echo "\n----------------------------------------------------------------------------------------------------------------------------------------------\n"
+# echo "\n----------------------------------------------------------------------------------------------------------------------------------------------\n"
 
-echo "RUNNING WRITE WORKLOAD"
+# echo "RUNNING WRITE WORKLOAD"
 
-read -p "Enter data size in MB: " size
+# read -p "Enter data size in MB: " size
 
-python Gens/genWrite.py $size
+# python Gens/genWrite.py $size
 
-spark-submit Workloads/Write.py write-input.txt
+# spark-submit Workloads/Write.py write-input.txt
 
-rm write-input.txt write-output.txt
+# rm write-input.txt write-output.txt
 
 # Scan
+
+# echo "\n----------------------------------------------------------------------------------------------------------------------------------------------\n"
+
+# echo "RUNNING SCAN WORKLOAD"
+
+# read -p "Enter data size in MB: " size
+
+# python Gens/genScan.py $size
+
+# spark-submit Workloads/Scan.py scan-input.txt
+
+# rm scan-input.txt
+
 # OrderBy
 # Aggregation
 # Project
