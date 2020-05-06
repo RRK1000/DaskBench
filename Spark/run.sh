@@ -142,6 +142,19 @@
 # rm scan-input.txt
 
 # OrderBy
+
+# echo "\n----------------------------------------------------------------------------------------------------------------------------------------------\n"
+
+# echo "RUNNING ORDERBY WORKLOAD"
+
+# read -p "Enter data size in MB: " size
+
+# python Gens/genOrderBy.py $size
+
+# spark-submit Workloads/OrderBy.py orderby-input.txt
+
+# rm orderby-input.txt
+
 # Aggregation
 # Project
 # Filter
