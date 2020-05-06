@@ -143,17 +143,19 @@
 
 # OrderBy
 
-# echo "\n----------------------------------------------------------------------------------------------------------------------------------------------\n"
+echo "\n----------------------------------------------------------------------------------------------------------------------------------------------\n"
 
-# echo "RUNNING ORDERBY WORKLOAD"
+echo "RUNNING ORDERBY WORKLOAD"
 
-# read -p "Enter data size in MB: " size
+read -p "Enter rows: " rows
 
-# python Gens/genOrderBy.py $size
+read -p "Enter cols: " cols
 
-# spark-submit Workloads/OrderBy.py orderby-input.txt
+python Gens/genCSV.py $rows $cols
 
-# rm orderby-input.txt
+spark-submit Workloads/OrderBy.py csv-input.csv
+
+rm csv-input.csv
 
 # Aggregation
 # Project

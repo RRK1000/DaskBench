@@ -15,12 +15,6 @@ if __name__ == "__main__":
         .appName("PythonOrderBy")\
         .getOrCreate()
 
-    lines = spark.read.text(sys.argv[1]).rdd.map(lambda r: r[0])
-    sortedCount = lines.flatMap(lambda x: x.split(' ')) \
-        .map(lambda x: (x, 1)) \
-        .sortByKey()
-    # output = sortedCount.collect()
-    # for (num, unitcount) in output:
-    #     print(num)
-
+    df = spark.read.csv(sys.argv[1], inferSchema=True, header=True)
+    df.orderBy("col-1")
     spark.stop()
