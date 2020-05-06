@@ -143,21 +143,36 @@
 
 # OrderBy
 
-echo "\n----------------------------------------------------------------------------------------------------------------------------------------------\n"
+# echo "\n----------------------------------------------------------------------------------------------------------------------------------------------\n"
 
-echo "RUNNING ORDERBY WORKLOAD"
+# echo "RUNNING ORDERBY WORKLOAD"
 
-read -p "Enter rows: " rows
+# read -p "Enter rows: " rows
 
-read -p "Enter cols: " cols
+# read -p "Enter cols: " cols
 
-python Gens/genCSV.py $rows $cols
+# python Gens/genCSV.py $rows $cols
 
-spark-submit Workloads/OrderBy.py csv-input.csv
+# spark-submit Workloads/OrderBy.py csv-input.csv
 
-rm csv-input.csv
+# rm csv-input.csv
 
 # Aggregation
+
+# echo "\n----------------------------------------------------------------------------------------------------------------------------------------------\n"
+
+# echo "RUNNING AGGREGATION WORKLOAD"
+
+# read -p "Enter rows: " rows
+
+# read -p "Enter cols: " cols
+
+# python Gens/genCSV.py $rows $cols
+
+# spark-submit Workloads/Aggregation.py csv-input.csv
+
+# rm csv-input.csv
+
 # Project
 # Filter
 # Select

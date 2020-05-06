@@ -7,14 +7,14 @@ from pyspark.sql import SparkSession
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: OrderBy <file>", file=sys.stderr)
+        print("Usage: Aggregation <file>", file=sys.stderr)
         sys.exit(-1)
 
     spark = SparkSession\
         .builder\
-        .appName("PythonOrderBy")\
+        .appName("PythonAggregation")\
         .getOrCreate()
 
     df = spark.read.csv(sys.argv[1], inferSchema=True, header=True)
-    df.orderBy("col-1")
+    df.groupBy("col-1").max()
     spark.stop()
