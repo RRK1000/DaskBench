@@ -174,6 +174,21 @@
 # rm csv-input.csv
 
 # Project
+
+# echo "\n----------------------------------------------------------------------------------------------------------------------------------------------\n"
+
+# echo "RUNNING PROJECT WORKLOAD"
+
+# read -p "Enter rows: " rows
+
+# read -p "Enter cols: " cols
+
+# python Gens/genCSV.py $rows $cols
+
+# spark-submit Workloads/Project.py csv-input.csv
+
+# rm csv-input.csv
+
 # Filter
 # Select
 # Union
