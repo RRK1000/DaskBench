@@ -17,4 +17,5 @@ sched_IP = sys.argv[3]
 client = Client(sched_IP)
 datafile1 = generate_data("file1",file1[0],file1[1],0)
 dataframe1 = dd.read_csv("file1.csv")
+dataframe1.compute()
 print(dataframe1.loc[dataframe1['col-1'] > '5'])

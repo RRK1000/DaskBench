@@ -15,8 +15,8 @@ if (len(sys.argv) < 4):
 file1 = (int(sys.argv[1]), int(sys.argv[2]))
 sched_IP = sys.argv[3]
 
-
+client = Client(sched_IP)
 datafile1 = generate_data("file1",file1[0],file1[1],0)
 dataframe1 = dd.read_csv("file1.csv")
-client = Client(sched_IP)
+dataframe1.compute()
 print(dataframe1.loc[dataframe1['col-1'] != ''])
