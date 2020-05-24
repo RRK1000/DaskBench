@@ -2,9 +2,12 @@ import lorem
 import sys
 import os
 
-def generate_data(filename,rows,cols, col_offset):
-    inputfile = open(filename+ ".csv", "w+")
-    for i in range(rows):
+def generate_data(filename,size,cols, col_offset):
+    if (os.path.exists(filename+".csv")):
+        return
+    inputfile = open(filename+ ".csv", "w")
+    i = 0
+    while (os.stat(filename+".csv").st_size < size*1024*1024):
         for j in range(col_offset,cols+ col_offset):
             if i == 0:
                 if (j == cols + col_offset -1):
@@ -17,4 +20,6 @@ def generate_data(filename,rows,cols, col_offset):
                 else:
                     inputfile.write(lorem.sentence() + ",")
         inputfile.write("\n")
+        inputfile.flush()
+        i+=1
     inputfile.close()

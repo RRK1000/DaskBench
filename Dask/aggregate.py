@@ -9,13 +9,14 @@ import math
 import dask
 
 if (len(sys.argv) < 4):
-    print("USAGE ./aggregate.py <file 1 rows> <file 1 columns> <scheduler url>")
+    print("USAGE ./aggregate.py <file 1 size> <file 1 columns> <scheduler url>")
     exit(1)
 
 file1 = (int(sys.argv[1]), int(sys.argv[2]))
 sched_IP = sys.argv[3]
 client = Client(sched_IP)
-
 datafile1 = generate_data("file1",file1[0],file1[1],0)
 dataframe1 = dd.read_csv("file1.csv")
 dataframe1.groupby('col-1').sum()
+dataframe1.compute()
+print(dataframe1)

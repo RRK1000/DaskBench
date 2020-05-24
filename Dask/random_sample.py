@@ -5,7 +5,7 @@ import sys
 import random
 
 if (len(sys.argv) < 4):
-    print("USAGE ./random_sample.py <num words in set> <number of samples> <scheduler url>")
+    print("USAGE ./random_sample.py <size> <number of samples> <scheduler url>")
     exit(1)
 
 num_words_total = int(sys.argv[1])

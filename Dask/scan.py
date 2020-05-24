@@ -8,7 +8,7 @@ import sys
 import dask
 
 if (len(sys.argv) < 4):
-    print("USAGE ./scan.py <file 1 rows> <file 1 columns> <scheduler url>")
+    print("USAGE ./scan.py <file 1 size> <file 1 columns> <scheduler url>")
     exit(1)
 
 file1 = (int(sys.argv[1]), int(sys.argv[2]))
@@ -26,4 +26,4 @@ def scan_data(file):
 
 task = delayed(scan_data)(open("file1.csv"))
 output = compute(task)
-#print(output)
+print(output)

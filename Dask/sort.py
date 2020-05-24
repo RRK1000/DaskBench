@@ -4,7 +4,7 @@ from dask.distributed import Client
 import sys
 
 if (len(sys.argv) < 3):
-    print("USAGE ./sort.py <num words> <scheduler url>")
+    print("USAGE ./sort.py <size of file> <scheduler url>")
     exit(1)
 
 num_words = int(sys.argv[1])

@@ -22,7 +22,7 @@ if (validate == 1):
     result = defaultdict(int)
 
     for word in data_words:
-    result[word]+= 1
+        result[word]+= 1
 
 client = Client(sched_IP)
 futures_array = []
@@ -54,7 +54,7 @@ final_result = defaultdict(int)
 for index in range(len(results_array)):
     for item in results_array[index]:
         final_result[item] += results_array[index][item]
-
+print(final_result)
 if (validate == 1):
     if (final_result == result):
         print("valid")

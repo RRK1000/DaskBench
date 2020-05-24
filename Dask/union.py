@@ -9,7 +9,7 @@ import math
 import dask
 
 if (len(sys.argv) < 6):
-    print("USAGE ./union.py <file 1 rows> <file 1 columns> <file 2 rows> <file 2 columns> <scheduler url>")
+    print("USAGE ./union.py <file 1 size> <file 1 columns> <file 2 size> <file 2 columns> <scheduler url>")
     exit(1)
 
 file1 = (int(sys.argv[1]), int(sys.argv[2]))

@@ -42,4 +42,4 @@ results_array = list(results_array)
 final_result = list()
 for index in range(len(results_array)):
     final_result.extend(results_array[index])
-#print(final_result)
+print(final_result)
