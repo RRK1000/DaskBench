@@ -34,17 +34,17 @@ echo "Using scheduler $1"
 # current_bench="aggregate"
 # bench_this $current_bench $1 "{ time python3 aggregate.py 100 10 $1 > ./exec/${current_bench}_exec_out.txt 2>&1 ; } 2>&1 | cat > ./result/${current_bench}_time.txt"
 
-current_bench="connected_components"
-bench_this $current_bench $1 "{ time python3 connected_components.py 1000 3000 $1 > ./exec/${current_bench}_exec_out.txt 2>&1 ; } 2>&1 | cat > ./result/${current_bench}_time.txt"
+# current_bench="connected_components"
+# bench_this $current_bench $1 "{ time python3 connected_components.py 1000 3000 $1 > ./exec/${current_bench}_exec_out.txt 2>&1 ; } 2>&1 | cat > ./result/${current_bench}_time.txt"
 
-current_bench="filter"
-bench_this $current_bench $1 "{ time python3 filter.py 100 10 $1 > ./exec/${current_bench}_exec_out.txt 2>&1 ; } 2>&1 | cat > ./result/${current_bench}_time.txt"
+# current_bench="filter"
+# bench_this $current_bench $1 "{ time python3 filter.py 100 10 $1 > ./exec/${current_bench}_exec_out.txt 2>&1 ; } 2>&1 | cat > ./result/${current_bench}_time.txt"
 
 # current_bench="grep"
 # bench_this $current_bench $1 "{ time python3 grep.py 50 $1 > ./exec/${current_bench}_exec_out.txt 2>&1 ; } 2>&1 | cat > ./result/${current_bench}_time.txt"
 
-current_bench="mat_mult"
-bench_this $current_bench $1 "{ time python3 matmult.py 9000 $1 > ./exec/${current_bench}_exec_out.txt 2>&1 ; } 2>&1 | cat > ./result/${current_bench}_time.txt"
+# current_bench="mat_mult"
+# bench_this $current_bench $1 "{ time python3 matmult.py 9000 $1 > ./exec/${current_bench}_exec_out.txt 2>&1 ; } 2>&1 | cat > ./result/${current_bench}_time.txt"
 
 # current_bench="md5_hash"
 # bench_this $current_bench $1 "{ time python3 md5_hash.py 20 $1 > ./exec/${current_bench}_exec_out.txt 2>&1 ; } 2>&1 | cat > ./result/${current_bench}_time.txt"
@@ -64,17 +64,17 @@ bench_this $current_bench $1 "{ time python3 matmult.py 9000 $1 > ./exec/${curre
 # current_bench="scan"
 # bench_this $current_bench $1 "{ time python3 scan.py 100 10 $1 > ./exec/${current_bench}_exec_out.txt 2>&1 ; } 2>&1 | cat > ./result/${current_bench}_time.txt"
 
-current_bench="select"
-bench_this $current_bench $1 "{ time python3 select.py 100 10 $1 > ./exec/${current_bench}_exec_out.txt 2>&1 ; } 2>&1 | cat > ./result/${current_bench}_time.txt"
+#current_bench="select"
+#bench_this $current_bench $1 "{ time python3 select.py 100 10 $1 > ./exec/${current_bench}_exec_out.txt 2>&1 ; } 2>&1 | cat > ./result/${current_bench}_time.txt"
 
 # current_bench="sort"
 # bench_this $current_bench $1 "{ time python3 sort.py 100 $1 > ./exec/${current_bench}_exec_out.txt 2>&1 ; } 2>&1 | cat > ./result/${current_bench}_time.txt"
 
-current_bench="union"
-bench_this $current_bench $1 "{ time python3 union.py 100 20 100 10 $1 > ./exec/${current_bench}_exec_out.txt 2>&1 ; } 2>&1 | cat > ./result/${current_bench}_time.txt"
+# current_bench="union"
+# bench_this $current_bench $1 "{ time python3 union.py 100 20 100 10 $1 > ./exec/${current_bench}_exec_out.txt 2>&1 ; } 2>&1 | cat > ./result/${current_bench}_time.txt"
 
-# current_bench="wordcount"
-# bench_this $current_bench $1 "{ time python3 wordcount.py 10 $1 0 > ./exec/${current_bench}_exec_out.txt 2>&1 ; } 2>&1 | cat > ./result/${current_bench}_time.txt"
+current_bench="wordcount"
+bench_this $current_bench $1 "{ time python3 wordcount.py 10 $1 0 > ./exec/${current_bench}_exec_out.txt 2>&1 ; } 2>&1 | cat > ./result/${current_bench}_time.txt"
 
-current_bench="write"
-bench_this $current_bench $1 "{ time python3 write.py 100 $1 > ./exec/${current_bench}_exec_out.txt 2>&1 ; } 2>&1 | cat > ./result/${current_bench}_time.txt"
+# current_bench="write"
+# bench_this $current_bench $1 "{ time python3 write.py 100 $1 > ./exec/${current_bench}_exec_out.txt 2>&1 ; } 2>&1 | cat > ./result/${current_bench}_time.txt"

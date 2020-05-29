@@ -13,7 +13,10 @@ length_of_data = int(sys.argv[1])
 sched_IP = sys.argv[2]
 validate = sys.argv[3]
 
-data = generate_data(length_of_data)
+#data = generate_data(length_of_data)
+data = None
+with open("wcfile.txt",'r') as myfile:
+    data = myfile.read()
 data_sentence = data.split("\n")
 result = None
 if (validate == 1):
