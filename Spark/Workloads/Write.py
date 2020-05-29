@@ -13,12 +13,12 @@ sc = SparkContext(conf=conf)
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: Read <file>", file=sys.stderr)
+        print("Usage: Write <file>", file=sys.stderr)
         sys.exit(-1)
 
     spark = SparkSession\
         .builder\
-        .appName("PythonRead")\
+        .appName("PythonWrite")\
         .getOrCreate()
 
     lines = sc.textFile(sys.argv[1]).map(write)
